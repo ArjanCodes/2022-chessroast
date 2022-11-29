@@ -39,7 +39,7 @@ class Board:
         return board
 
     def place(self, piece: Piece) -> None:
-        self.pieces[(piece.x, piece.y)] = Piece
+        self.pieces[(piece.x, piece.y)] = piece
 
     def piece(self, x: int, y: int) -> Piece:
         return self.pieces[(x, y)]
