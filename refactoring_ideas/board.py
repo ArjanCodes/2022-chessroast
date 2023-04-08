@@ -20,10 +20,10 @@ def empty_board() -> Grid:
 @dataclass
 class Board:
     pieces: Grid = field(default_factory=empty_board)
-
-    @staticmethod
-    def from_fen(fen: str) -> Board:
-        board = Board()
+        
+ @classmethod
+    def from_fen(cls, fen: str) -> Board:
+        board = cls()
         fenlist = fen.split("/")
 
         for indy, y in enumerate(fenlist):
